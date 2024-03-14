@@ -30,7 +30,7 @@ jobs:
         if: failure() && ${{ failure() }}
         uses: actions/upload-artifact@v2
         with:
-          name: test-report
+          name: test-report-${{ matrix.version}}
           path: htmlcov/
 
   deploy:
